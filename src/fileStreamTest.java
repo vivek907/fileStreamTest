@@ -3,14 +3,13 @@ public class fileStreamTest {
 
     // Testing
     public static void main(String args[]) {
-
+        // This is a try statement
         try {
             byte bWrite [] = {11,21,3,40,5};
             OutputStream os = new FileOutputStream("test.txt");
             for(int x = 0; x < bWrite.length ; x++) {
                 os.write( bWrite[x] );   // writes the bytes
             }
-            os.close();
 
             InputStream is = new FileInputStream("test.txt");
             int size = is.available();
@@ -22,5 +21,7 @@ public class fileStreamTest {
         } catch (IOException e) {
             System.out.print("Exception");
         }
+
+        System.out.println("This is done!!");
     }
 }
